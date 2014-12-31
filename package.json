@@ -1,0 +1,42 @@
+{
+  "name": "sails-generate-raml-scaffolding",
+  "version": "0.1.0",
+  "description": "sails generate raml-scaffolding",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stt/sails-generate-raml-scaffolding.git"
+  },
+  "keywords": [
+    "raml-scaffolding",
+    "raml",
+    "scaffolding",
+    "generator",
+    "sails",
+    "generate",
+    "plugin"
+  ],
+  "author": "stt <samuli@tuomola.net>",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": ">=2.4.x",
+    "merge-defaults": ">=0.1.0",
+    "raml-parser": "~0.8.9"
+  },
+  "devDependencies": {
+    "sails-generate": "*",
+    "reportback": "*",
+    "fs-extra": "*"
+  },
+  "sailsGenerator": {
+    "type": "raml-scaffolding",
+    "behavior": "overrides `sails generate raml-scaffolding`",
+    "sailsVersion": "~0.10.0"
+  },
+  "bugs": {
+    "url": "https://github.com/stt/sails-generate-raml-scaffolding/issues"
+  }
+}
