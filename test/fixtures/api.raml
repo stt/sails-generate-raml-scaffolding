@@ -1,0 +1,30 @@
+#%RAML 0.8
+title: API
+/user:
+/users:
+  /{userId}:
+    uriParameters:
+      userId:
+        type: integer
+    /followers:
+    /keys:
+      /{keyId}:
+        uriParameters:
+          keyId:
+            type: integer
+  post:
+    body:
+      multipart/form-data:
+        formParameters:
+          somenumber:
+            type: integer
+            required: true
+          at:
+            type: date
+            description: |
+                @wl-type datetime
+                Reservation date and time
+            required: true
+          note:
+            description: Optional
+

@@ -1,6 +1,6 @@
 {
   "name": "sails-generate-raml-scaffolding",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "sails generate raml-scaffolding",
   "main": "lib/index.js",
   "scripts": {
@@ -27,9 +27,11 @@
     "raml-parser": "~0.8.9"
   },
   "devDependencies": {
-    "sails-generate": "*",
-    "reportback": "*",
-    "fs-extra": "*"
+    "bluebird": "^2.5.3",
+    "fs-extra": "^0.13.0",
+    "mocha": "^2.1.0",
+    "reportback": "^0.1.8",
+    "sails-generate": "^0.12.2"
   },
   "sailsGenerator": {
     "type": "raml-scaffolding",
