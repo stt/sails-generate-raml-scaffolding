@@ -1,17 +1,29 @@
 # sails-generate-raml-scaffolding
 
-This is a tool for generating Sails models from [RESTful API Modeling Language](http://raml.org/) specification.
+A tool for generating Sails models from [RESTful API Modeling Language](http://raml.org/) specification.
+
+This is not intended to produce a working implementation of an API, or even working code in most cases, instead the result is simply meant to serve as a quickstart basis for a new project.
 
 ### Features
 
-- creates model for each RAML resource
+- creates a model for each RAML resource
 - maps formParameters from post actions to model attributes
-- supported model attribute properties: `type`, `required`
+- if Sails blueprints are configured to pluralize will rename models accordingly
+- maps several RAML attribute properties to one recognized by Waterline
+- parses RAML resource description field for annotations prefixed by `@wl-`,
+  and inserts them in the model attribute definition (see [here](https://github.com/balderdashy/waterline-docs/blob/master/models.md) for supported properties), rest of the description is added as javascript comment
 
 ### Planned features
 
-- controllers
-- policies
+- generating placeholder code for controllers and policies
+
+### Known issues
+
+- identifying resources is naive and is likely to contain issues, e.g. collisions
+- practically no validation is done to verify RAML description fields or the code injected in to the model files
+- overwrites attributes of existing models if one with same name is parsed from RAML
+
+In other words, be cautious, do not run in a project with uncommitted code of any value.
 
 ### Installation
 
@@ -57,7 +69,7 @@ See `FAQ.md`.
 ### License
 
 **[MIT](./LICENSE)**
-&copy; 2014 [balderdashy](http://github.com/balderdashy) & contributors
+&copy; 2014 [stt](http://github.com/stt)
 
 As for [Sails](http://sailsjs.org)?  It's free and open-source under the [MIT License](http://sails.mit-license.org/).
 
